@@ -1,0 +1,8 @@
+.env
+/node_modules
+/vendor
+/bootstrap
+/wp-config.php
+/public/admin
+/public/app/plugins
+/public/app/uploads
