@@ -5,12 +5,12 @@ This is a basic WordPress installation managed by Composer.
 ## Installation
 
 ```sh
-composer install
+composer create-project brw/looma-wp
 ```
 
 ## Deployment
 
-Make sure to exclude your theme or plugin from the `.gitignore`. E.g.
+Make sure to exclude your custom themes or plugins from the `.gitignore`. E.g.
 
 ```
 /public/app/plugins/**
