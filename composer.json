@@ -1,23 +1,30 @@
 {
-    "name": "brw/wp",
-    "description": "WordPress installation managed by Composer",
+    "name": "brw/looma-wp",
+    "description": "WordPress installation managed by Composer, improved by Looma",
     "type": "project",
     "repositories": [
         {
             "type": "composer",
             "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/benrutlandweb/looma"
+        },
+        {
+            "type": "composer",
+            "url": "https://connect.advancedcustomfields.com"
         }
     ],
     "require": {
         "php": "^8.4",
+        "brw/looma": "dev-main",
         "johnpbloch/wordpress-core-installer": "^2.0",
         "johnpbloch/wordpress-core": "^6.0",
         "symfony/var-dumper": "^7.3",
-        "vlucas/phpdotenv": "^5.6"
-    },
-    "require-dev": {
-        "wp-cli/wp-cli": "^2.12",
-        "wp-cli/wp-cli-bundle": "^2.12"
+        "vlucas/phpdotenv": "^5.6",
+        "wpackagist-plugin/instant-images": "^7.0",
+        "wpengine/advanced-custom-fields-pro": "6.5.0.1"
     },
     "extra": {
         "wordpress-install-dir": "public/admin",
@@ -41,13 +48,16 @@
         }
     },
     "scripts": {
+        "post-create-project-cmd": [
+            "Looma\\Foundation\\ComposerScripts::postCreateProject"
+        ],
         "post-install-cmd": [
-            "cp .env.example .env"
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
     },
     "autoload": {
-        "files": [
-            "public/helpers.php"
-        ]
+        "psr-4": {
+            "App\\": "public/app/themes/looma/app"
+        }
     }
 }

@@ -1,7 +1,11 @@
 .env
 /node_modules/
 /public/admin/
+/public/app/mu-plugins/**
+!/public/app/mu-plugins/bootstrap.php
 /public/app/plugins/**
 /public/app/themes/**
+!/public/app/themes/looma/
+!/public/app/themes/looma/**
 /public/app/uploads/
 /vendor/

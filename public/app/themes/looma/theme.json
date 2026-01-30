@@ -1,0 +1,16 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "title": "Looma",
+    "description": "Fully version controlled WordPress framework.",
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "allowCustomContentAndWideSize": true,
+            "allowEditing": true,
+            "contentSize": "45rem",
+            "wideSize": "60rem"
+        },
+        "useRootPaddingAwareAlignments": true
+    }
+}
