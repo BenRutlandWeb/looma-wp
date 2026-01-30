@@ -48,9 +48,6 @@
         }
     },
     "scripts": {
-        "post-create-project-cmd": [
-            "Looma\\Foundation\\ComposerScripts::postCreateProject"
-        ],
         "post-install-cmd": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
