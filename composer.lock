@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c08f38e2318c2be270affc12b47af096",
+    "content-hash": "ed3402e585a18bc562ef8a913b8485dd",
     "packages": [
         {
             "name": "brw/looma",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenRutlandWeb/looma.git",
-                "reference": "339ab1cd2d76f4701da794ec61c55e8d570bd49b"
+                "reference": "26315fed3687b8ce3b7501b43ed5c517a87484e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenRutlandWeb/looma/zipball/339ab1cd2d76f4701da794ec61c55e8d570bd49b",
-                "reference": "339ab1cd2d76f4701da794ec61c55e8d570bd49b",
+                "url": "https://api.github.com/repos/BenRutlandWeb/looma/zipball/26315fed3687b8ce3b7501b43ed5c517a87484e6",
+                "reference": "26315fed3687b8ce3b7501b43ed5c517a87484e6",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +40,7 @@
                 "source": "https://github.com/BenRutlandWeb/looma/tree/main",
                 "issues": "https://github.com/BenRutlandWeb/looma/issues"
             },
-            "time": "2026-01-30T16:59:43+00:00"
+            "time": "2026-01-30T17:18:58+00:00"
         },
         {
             "name": "composer/installers",
@@ -969,6 +969,24 @@
                 }
             ],
             "time": "2025-12-27T19:49:13+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/create-block-theme",
+            "version": "2.8.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/create-block-theme/",
+                "reference": "tags/2.8.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/create-block-theme.2.8.0.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/create-block-theme/"
         },
         {
             "name": "wpackagist-plugin/instant-images",
