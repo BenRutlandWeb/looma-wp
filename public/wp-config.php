@@ -8,7 +8,18 @@ $envData = $dotenv->safeLoad();
 
 $dotenv->required(['APP_URL', 'DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD'])->notEmpty();
 
-foreach ($envData as $key => $value) {
+$disallowed_vars = [
+    'DISALLOW_FILE_EDIT',
+    'DISALLOW_FILE_MODS',
+    'WP_AUTO_UPDATE_CORE',
+    'AUTOMATIC_UPDATER_DISABLED',
+];
+
+foreach ($disallowed_vars as $key) {
+    unset($env[$key]);
+}
+
+foreach ($env as $key => $value) {
     if (!defined($key)) {
         define($key, $value);
     }
