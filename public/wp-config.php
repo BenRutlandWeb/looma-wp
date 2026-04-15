@@ -1,6 +1,10 @@
 <?php
 
+use Env\Env;
+
 require_once __DIR__ . '/../vendor/autoload.php';
+
+Env::$options |= Env::USE_ENV_ARRAY;
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 
