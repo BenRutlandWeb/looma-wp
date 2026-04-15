@@ -6,7 +6,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 
 $envData = $dotenv->safeLoad();
 
-$dotenv->required(['APP_URL', 'DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD'])->notEmpty();
+$dotenv->required(['APP_URL', 'DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASS'])->notEmpty();
 
 $disallowed_vars = [
     'DISALLOW_FILE_EDIT',
