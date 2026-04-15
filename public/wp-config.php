@@ -19,6 +19,7 @@ $required_vars = [
     'WP_CONTENT_URL'             => $app_url . '/app',
     'WP_CONTENT_DIR'             => __DIR__ . '/app',
     'WP_ENVIRONMENT_TYPE'        => $env['APP_ENV'] ?? 'production',
+    'WP_DEFAULT_THEME'           => 'looma',
     'DISALLOW_FILE_EDIT'         => true,
     'DISALLOW_FILE_MODS'         => true,
     'WP_AUTO_UPDATE_CORE'        => false,
