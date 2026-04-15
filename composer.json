@@ -14,17 +14,23 @@
     {
       "type": "composer",
       "url": "https://connect.advancedcustomfields.com"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/BenRutlandWeb/looma-theme"
     }
   ],
   "require": {
     "php": "^8.4",
     "brw/looma": "dev-main",
+    "brw/looma-theme": "dev-main",
     "johnpbloch/wordpress-core-installer": "^2.0",
     "johnpbloch/wordpress-core": "^6.0",
     "symfony/var-dumper": "^7.3",
     "vlucas/phpdotenv": "^5.6",
     "aaemnnosttv/wp-cli-dotenv-command": "^2.1",
     "oscarotero/env": "^2.1",
+    "composer/installers": "^2.3",
     "wpengine/advanced-custom-fields-pro": "6.8.0.1"
   },
   "require-dev": {
