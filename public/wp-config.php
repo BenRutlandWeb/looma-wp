@@ -4,7 +4,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 
-$envData = $dotenv->safeLoad();
+$env = $dotenv->safeLoad();
 
 $dotenv->required(['APP_URL', 'DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD'])->notEmpty();
 
@@ -25,19 +25,19 @@ foreach ($env as $key => $value) {
     }
 }
 
-$table_prefix = $_ENV['DB_PREFIX'] ?? 'wp_';
+$table_prefix = $env['DB_PREFIX'] ?? 'wp_';
 
 if (! defined('WP_DEBUG')) {
-    define('WP_DEBUG', $_ENV['APP_DEBUG'] ?? false);
+    define('WP_DEBUG', $env['APP_DEBUG'] ?? false);
 }
 
-define('WP_HOME', rtrim($_ENV['APP_URL'], '/'));
+define('WP_HOME', rtrim($env['APP_URL'], '/'));
 define('WP_SITEURL', WP_HOME . '/admin');
 define('WP_CONTENT_DIR', __DIR__ . '/app');
 define('WP_CONTENT_URL', WP_HOME . '/app');
 
 /* */
-define('WP_ENVIRONMENT_TYPE', $_ENV['APP_ENV'] ?? 'production');
+define('WP_ENVIRONMENT_TYPE', $env['APP_ENV'] ?? 'production');
 define('DISALLOW_FILE_EDIT', true);
 define('DISALLOW_FILE_MODS', true);
 define('WP_AUTO_UPDATE_CORE', false);
