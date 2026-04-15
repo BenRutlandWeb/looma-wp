@@ -1,5 +1,5 @@
 .env
-/composer.lock
+composer.lock
 /node_modules/
 /public/admin/
 /public/app/mu-plugins/**
