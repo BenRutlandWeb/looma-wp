@@ -10,13 +10,14 @@ $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 
 $env = $dotenv->safeLoad();
 
-$dotenv->required(['APP_URL', 'DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD'])->notEmpty();
+$dotenv->required(['APP_URL', 'DB_HOST', 'DB_NAME', 'DB_USERNAME', 'DB_PASSWORD'])->notEmpty();
 
 $app_url = rtrim($env['APP_URL'], '/');
 
 $table_prefix = $env['DB_PREFIX'] ?? 'wp_';
 
 $required_vars = [
+    'DB_USER'                    => $env['DB_USERNAME'],
     'WP_DEBUG'                   => $env['APP_DEBUG'] ?? false,
     'WP_HOME'                    => $app_url,
     'WP_SITEURL'                 => $app_url . '/admin',
